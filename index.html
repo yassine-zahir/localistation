@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Géolocalistion</title>
+  <style>
+    #map{
+      height: 500px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<h1>Géolocalisation</h1>
+<a href="maposition.html">Ma position</a>
+
+<div id="map"></div>  
+
+<script>
+function initMap(){
+  // Map options
+  var options = {
+    zoom:16,
+    center:{ lat: 33.923668899999996, lng: -6.953132999999999}
+  }
+
+  // New map
+  var map = new google.maps.Map(document.getElementById('map'),options);
+
+  // add  marker 
+
+  var marker = new google.maps.Marker({
+
+    position :{ lat: 33.923668899999996, lng: -6.953132999999999},
+    map: map
+  });
+
+
+}
+
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIIsuq-ZRvg5XUquI5-zv0DAX5uFGTZiM&callback=initMap">
+</script>
+
+    
+</body>
+</html>
